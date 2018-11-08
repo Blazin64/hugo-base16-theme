@@ -9,7 +9,7 @@
     <span class="key">{{ if $page.Date.IsZero }}published {{ end }}in</span>
     <span class="val">
 {{ range . }}
-        <a href="{{ . | printf "categories/%s" | urlize | relURL }}">{{ . }}</a>
+        <a href="{{ . | printf "categories/%s" | urlize | relURL }}">{{ . | urlize | title }}</a>
 {{ end }}
     </span>
 {{ end }}
@@ -18,7 +18,7 @@
     <span class="key">tags:</span>
     <span class="val">
 {{ range . }}
-        <a href="{{ . | printf "tags/%s" | urlize | relURL }}">{{ . }}</a>
+        <a href="{{ . | printf "tags/%s" | urlize| relURL }}">{{ . | urlize }}</a>
 {{ end }}
     </span>
 {{ end }}
