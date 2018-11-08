@@ -38,6 +38,67 @@
 
 @custom-media --breakpoint-md (max-width: 52em);
 
+/* Pagination */
+
+[data-pseudo-content]::before {
+  content: attr(data-pseudo-content);
+}
+.pagination {
+  display: block;
+  width: 100%;
+  min-width: 380px;
+  font-size: 1.0em;
+  margin-left: -40px;
+}
+.pagination ul{
+
+}
+.pagination li{
+  display: block;
+  float: left;
+}
+.pagination a{
+  color: var(--base07);
+  background: var(--base01);
+  text-decoration: none;
+  padding: 5px 7px;
+  margin-right: 2px;
+  color: var(--base07);
+  text-decoration: none;
+  border-radius: 0px;
+}
+.pagination span.ellipse{
+  color: var(--base07);
+  background: var(--base01);
+  text-decoration: none;
+  padding: 5px 0px;
+  margin-right: 2px;
+  text-decoration: none;
+  border-radius: 0px;
+}
+.pagination li a:hover {
+  background-color: var(--base07);
+  color: var(--base00);
+  text-decoration: none;
+}
+.pagination li.active a {
+  background-color: var(--base03);
+  color: var(--base07);
+  text-decoration: none;
+}
+li.page-indicator{
+  position: relative;
+  top: -3.5px;
+  display: block;
+  float: left;
+  color: var(--base07);
+  background: var(--base01);
+  text-decoration: none;
+  padding: 3.5px 7px;
+  margin-right: 2px;
+  border-radius: 0px;
+}
+
 /* General Page Layout */
 
 body {

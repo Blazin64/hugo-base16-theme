@@ -6,9 +6,11 @@
   <h1 class="headline">Recent Posts</h1>
 
   <div class="article-list">
-    {{ range first 3 (where .Data.Pages "Section" "post") }}
+    {{ $paginator := .Paginate (where .Data.Pages "Section" "post") }}
+    {{ range $paginator.Pages }}
       {{ partial "article-list-item.html" . }}
     {{ end }}
+    {{ partial "pagination.html" . }}
   </div>
 
 {{ with .Site.Taxonomies.categories }}
